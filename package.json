@@ -1,0 +1,18 @@
+{
+  "name": "user-activities",
+  "version": "1.0.0",
+  "description": "list activities",
+  "main": "index.js",
+  "author": "anteriovieira <anteriovieira@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "poi": "poi"
+  },
+  "devDependencies": {
+    "poi": "^9.6.11"
+  },
+  "dependencies": {
+    "buefy": "^0.6.2",
+    "moment": "^2.20.1"
+  }
+}
