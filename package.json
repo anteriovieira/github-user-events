@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "poi",
     "build": "poi build",
-    "start": "npm run build && node server.js"
+    "start": "node server.js"
   },
   "devDependencies": {
     "poi": "^9.6.11"
