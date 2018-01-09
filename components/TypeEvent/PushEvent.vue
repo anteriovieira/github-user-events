@@ -8,6 +8,7 @@
     <p>
       <ul class="commit">
         <li v-for="commit of event.payload.commits" :key="commit.push_id">
+          (<span :title="commit.author.email">{{ commit.author.name }}</span>)
           <a :href="getUrl(commit)">{{ commit.sha.slice(0, 7) }}</a>
           {{ commit.message }}
         </li>
@@ -42,6 +43,10 @@ export default {
   }
   .commit > li {
     list-style-type: none;
+  }
+  .image {
+    display: inline-block;
+    margin: 5px;
   }
 </style>
 

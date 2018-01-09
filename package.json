@@ -6,13 +6,17 @@
   "author": "anteriovieira <anteriovieira@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "poi": "poi"
+    "poi": "poi",
+    "build": "poi build",
+    "start": "node server.js"
   },
   "devDependencies": {
     "poi": "^9.6.11"
   },
   "dependencies": {
     "buefy": "^0.6.2",
-    "moment": "^2.20.1"
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "vue-markdown": "^2.2.4"
   }
 }
