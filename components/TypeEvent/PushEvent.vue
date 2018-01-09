@@ -6,9 +6,9 @@
       <strong>{{ event.repo.name }}</strong>
     </p>
     <p>
-      <ul>
+      <ul class="commit">
         <li v-for="commit of event.payload.commits" :key="commit.push_id">
-          <a :href="commit.url">{{ commit.sha.slice(0, 7) }}</a>
+          <a :href="getUrl(commit)">{{ commit.sha.slice(0, 7) }}</a>
           {{ commit.message }}
         </li>
       </ul>
@@ -24,7 +24,24 @@ export default {
     branch() {
       return this.event.payload.ref.split('/')[2]
     }
+  },
+  methods: {
+    getUrl(commit) {
+      return `https://github.com/${this.event.repo.name}/commit/${commit.sha}`
+    }
   }
 }
 </script>
+
+<style scoped>
+  ul.commit {
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .commit > li {
+    list-style-type: none;
+  }
+</style>
 

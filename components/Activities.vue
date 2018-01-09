@@ -20,8 +20,6 @@
             <button @click="fetch" class="button is-primary">Search</button>
         </p>
       </b-field>
-
-      <small v-show="typing">typing...</small>
     </div>  
 
     <hr>
@@ -41,7 +39,8 @@ export default {
       events: [],
       updated: null,
       typing: false,
-      isLoading: false
+      isLoading: false,
+      interval: null,
     }
   },
   components: {Activity},
@@ -61,7 +60,10 @@ export default {
   created() {
     this.fetch()
 
-    setInterval(this.fetch, 3000)
+    this.interval = setInterval(this.fetch, 8000)
+  },
+  destroyed() {
+    clearInterval(this.interval)
   }
 }
 </script>
