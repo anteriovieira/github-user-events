@@ -6,7 +6,7 @@
   "author": "anteriovieira <anteriovieira@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "poi": "poi",
+    "dev": "poi",
     "build": "poi build",
     "start": "node server.js"
   },

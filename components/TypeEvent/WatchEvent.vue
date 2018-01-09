@@ -1,5 +1,5 @@
 <template>
-  <div>WatchEvent</div>
+  <div> <b-icon icon="alert-circle"  size="is-small" /> Not yet implemented WatchEvent</div>
 </template>
 
 <script>
