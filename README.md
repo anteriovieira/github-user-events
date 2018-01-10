@@ -8,4 +8,4 @@ An app to list your events
   <img src="https://raw.githubusercontent.com/anteriovieira/github-user-events/master/media/preview.png" alt="Preview" />
 </p>
 
-Thia app was made with [poi](https://poi.js.org/) and [vuejs](https://vuejs.org).
+This app was made with [poi](https://poi.js.org/) and [vuejs](https://vuejs.org).
