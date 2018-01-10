@@ -18,14 +18,14 @@
                   <b-input 
                       expanded
                       v-model="user"
-                      placeholder="Search..."
+                      placeholder="username"
                       type="search"
                       icon="magnify"
                       @click="typing = true"
                       @blur="typing = false">
                   </b-input>
                   <p class="control">
-                      <button @click="fetch" class="button is-primary">Search</button>
+                      <button @click="fetch" class="button is-primary">Load events</button>
                   </p>
                 </b-field>
               </div>
@@ -79,7 +79,6 @@ export default {
       updated: null,
       typing: false,
       isLoading: false,
-      interval: null,
     }
   },
   computed: {
@@ -111,11 +110,6 @@ export default {
   },
   created() {
     this.fetch()
-
-    this.interval = setInterval(this.fetch, 8000)
-  },
-  destroyed() {
-    clearInterval(this.interval)
   }
 }
 </script>
