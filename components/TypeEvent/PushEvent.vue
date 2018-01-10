@@ -2,8 +2,8 @@
   <div>
     <p>
       <strong>{{ event.actor.login }}</strong> 
-      <small>pushed to <a :href="event.payload.ref">{{ branch }}</a> in</small>
-      <strong>{{ event.repo.name }}</strong>
+      <small>pushed to <a :href="source">{{ branch }}</a> in</small>
+      <a :href="urlRepo"><strong>{{ event.repo.name }}</strong></a>
     </p>
     <p>
       <ul class="commit">
@@ -24,11 +24,20 @@ export default {
   computed: {
     branch() {
       return this.event.payload.ref.split('/')[2]
-    }
+    },
+    source() {
+      return `${this.urlRepo}/${this.event.payload.ref}`
+    },
+    urlActor() {
+      return `https://github.com/${this.event.actor.login}`
+    },
+    urlRepo() {
+      return `https://github.com/${this.event.repo.name}`
+    },
   },
   methods: {
     getUrl(commit) {
-      return `https://github.com/${this.event.repo.name}/commit/${commit.sha}`
+      return `${this.urlRepo}/${this.event.repo.name}/commit/${commit.sha}`
     }
   }
 }
