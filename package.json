@@ -17,6 +17,8 @@
     "buefy": "^0.6.2",
     "express": "^4.16.2",
     "moment": "^2.20.1",
-    "vue-markdown": "^2.2.4"
+    "vue-markdown": "^2.2.4",
+    "vue-router": "^3.0.1",
+    "vue-routisan": "^1.1.3"
   }
 }
